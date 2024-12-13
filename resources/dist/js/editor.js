@@ -239,7 +239,7 @@ document.addEventListener("alpine:init", function () {
         var _this = this;
         return new Promise(function (resolve) {
           _this.$wire.upload("componentFileAttachments.".concat(statePath), blob, function (uploadedFilename) {
-            _this.$wire.getComponentFileAttachmentUrl(statePath).then(function (url) {
+            _this.$wire.getFormComponentFileAttachmentUrl(statePath).then(function (url) {
               if (!url) {
                 return resolve({
                   success: 0
